@@ -41,10 +41,12 @@ class Graph extends Component<IProps, {}> {
             timestamp: 'date',
         };
 
-        if (window.perspective && window.perspective.worker()) {
+        if (window.perspective && window.perspective.worker()) 
+        {
             this.table = window.perspective.worker().table(schema);
         }
-        if (this.table) {
+        if (this.table) 
+        {
             // Load the `table` in the `<perspective-viewer>` DOM reference.
 
             // Add more Perspective configurations here.
@@ -59,7 +61,8 @@ class Graph extends Component<IProps, {}> {
         }
     }
 
-    componentDidUpdate() {
+    componentDidUpdate() 
+{
         // Everytime the data props is updated, insert the data into Perspective table
         if (this.table) {
             // As part of the task, you need to fix the way we update the data props to
